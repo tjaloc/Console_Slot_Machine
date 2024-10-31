@@ -10,17 +10,28 @@ Gamble in your console or terminal, waste time, and lose your initial balance of
 4. **Enjoy the Animation:** (optional) 
 5. **Exit the Game:** Press X to exit.
 
+## Example Output
+
+Here’s how the game looks in the console:
+```
+  Slot-Machine!
+  ----------------
+  | 🍊 | 🍋 | 🍒 |
+  ----------------
+  
+  Oh, no luck this time!
+  
+  Press ENTER to play. 
+  You have 93 🪙
+```
+
 ## Why I Built This
 
 For fun, obviously! But it’s also a great way to experiment with random numbers and weighted probabilities. You can adjust the number of symbols, their values, and weights to see how wins and losses evolve.
 
-## Customization
-
-Feel free to modify the game! Experiment with different settings: number of symbols, values and weights. See how fast you loose or win
-
 ## Installation
 
-To run the Slot Machine, make sure you have Python installed. Clone the repository or download the file, then execute the script:
+To run the Slot Machine clone the repository or download the file, then execute the script:
 
 ```bash
 git clone https://github.com/tjaloc/Console_Slot_Machine.git
