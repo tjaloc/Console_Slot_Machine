@@ -30,23 +30,13 @@ def calc_payoff(bet, symbol):
     """Return payoff as product of reels, symbol value and bet """
     return bet * SYMBOL_VALUES[symbol] * REELS
 
-def spin_animation(results):
-    """ This is just an animation leading to showing the results.
-    Quick sequence of random symbols stopping one by one at the result
-    """
+def spin_animation(results, delay=0.1):
     for i in range(REELS):
         set_symbols = results[:i]
-        for j in range(10):
+        for _ in range(10):
             symbols = set_symbols + [random.choice(SYMBOLS) for _ in range(REELS - len(set_symbols))]
-            console_clear()
-
-            print(TITLE)
-            print(16 * "-")
-            print(f"| {' | '.join(symbols)} |")
-            print(16 * "-")
-            print()
-
-            sleep(.1)
+            display(symbols)
+            sleep(delay)
 
 def win_animation(symbol):
     """ three rows with winning symbols jumping up and down
