@@ -38,20 +38,14 @@ def spin_animation(results, delay=0.1):
             display(symbols)
             sleep(delay)
 
-def win_animation(symbol):
-    """ three rows with winning symbols jumping up and down
-    """
-    a = [symbol if i % 2 == 0 else '  ' for i in range(REELS) ]
-    b = [symbol if i % 2 == 1 else '  ' for i in range(REELS) ]
+def win_animation(symbol, delay=0.1):
+    pattern_a = [symbol if i % 2 == 0 else '  ' for i in range(REELS)]
+    pattern_b = [symbol if i % 2 == 1 else '  ' for i in range(REELS)]
     for _ in range(10):
-        console_clear()
-        print(TITLE)
-        print(f"| {' | '.join(a)} |")
-        print(f"| {' | '.join(b)} |")
-        print(f"| {' | '.join(a)} |")
-        print()
-        a, b = b, a
-        sleep(.1)
+        display(pattern_a)
+        sleep(delay)
+        display(pattern_b)
+        sleep(delay)
 
 def display(results):
     """clear console, print title and current symbols
