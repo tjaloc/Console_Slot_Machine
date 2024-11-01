@@ -81,9 +81,7 @@ def print_intro():
 
 def quit(balance):
     resp = input(f"\nPress ENTER to play. \nYou have {balance} 🪙\n")
-    if resp.strip().upper() == 'X':
-        return True
-    return False
+    return resp.strip().upper() == 'X'
 
 def play_slot_machine():
     balance = INITIAL_BALANCE
