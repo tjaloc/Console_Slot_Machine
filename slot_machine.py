@@ -8,9 +8,6 @@ TITLE = "Slot-Machine!"
 SYMBOLS = ["🍒", "🍋", "🍊", "🍇", "🍑", "💎"]
 VALUES = [i for i, _ in enumerate(SYMBOLS[:-1], start=1)] + [10] #[1, 2, 3, 4, 5, 6, 7, 10]
 SYMBOL_VALUES = dict(zip(SYMBOLS, VALUES))
-
-# each symbol appears anti-proportional to its value
-REEL = ''.join((max(VALUES) + 1 - value) * symbol for symbol, value in SYMBOL_VALUES.items())
 REELS = 3
 
 def console_clear():
